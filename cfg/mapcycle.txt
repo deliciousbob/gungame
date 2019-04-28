@@ -1,2 +1,14 @@
-de_dust
-de_dust2
+gg_trs_aim_churches
+gg_text_ninetwentyv2
+gg_speedcastle
+gg_spacebar
+gg_simpsons_h1
+gg_ka_fallingtrash
+gg_dm_hangumhigh_fixed
+gg_deagle_4hm
+gg_blue_arena
+gg_aim_47th_v2
+aim_bc_texture_7
+aim_bc_texture_jungle
+aim_bc_texture_agc
+aim_47th_nightoftheshotgun
