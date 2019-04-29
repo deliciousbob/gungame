@@ -21,7 +21,8 @@ docker-compose up
 
 ## TODO
 
-* Pick some maps
+* Pick some better maps
 * Speed boost on multiple kills
-* Get rid of rounds
+* Get rid of rounds?
 * More hype sound effects
+* Fix bug that does not finish game

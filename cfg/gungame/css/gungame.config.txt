@@ -21,7 +21,7 @@
          *      "taser,hegrenade,molotov,incgrenade"    - Default value
          *      ""                                      - Disabled
          */
-        "FastSwitchSkipWeapons" "hegrenade"
+        "FastSwitchSkipWeapons" ""
 
         /**
          * Switch weapon without delays after level up.
@@ -479,7 +479,7 @@
          * 0 - Disable
          * 1 and above - Minimum number of players in each team for UnlimitedNames to be on.
          */
-        "UnlimitedNadesMinPlayers" "1"
+        "UnlimitedNadesMinPlayers" "0"
 
         /**
          * Number of nades on the nade level.
@@ -614,7 +614,7 @@
         "HandicapSkipBots" "0"
 
         /* Can bots win the game otherwise when they reach the last weapon and nothing will happen */
-        "BotsCanWinGame" "0"
+        "BotsCanWinGame" "1"
 
         /* Allow level up by killing a bot with knife */
         "AllowLevelUpByKnifeBot" "0"
