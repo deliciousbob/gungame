@@ -2,6 +2,8 @@ FROM cm2network/steamcmd
 
 WORKDIR /home/steam
 
+ENV RCON_PASSWORD lolrly123
+
 USER root
 
 RUN apt-get update -y && \
@@ -40,6 +42,9 @@ RUN wget -q https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux
 	wget -O /home/steam/mapchooser_extended.zip "https://forums.alliedmods.net/attachment.php?attachmentid=130293&d=1391630113" && \
 	unzip -o /home/steam/mapchooser_extended.zip -d /home/steam/server/cstrike && \
 	rm /home/steam/mapchooser_extended.zip && \
+	wget -O /home/steam/sm_show_damage.zip "https://forums.alliedmods.net/attachment.php?attachmentid=60615&d=1267305028" && \
+	unzip -o /home/steam/sm_show_damage.zip -d /home/steam/server/cstrike/addons/sourcemod && \
+	rm /home/steam/sm_show_damage.zip && \
 	mv /home/steam/server/cstrike/addons/sourcemod/plugins/gungame.smx /home/steam/server/cstrike/addons/sourcemod/plugins/disabled/ && \
 	mv /home/steam/server/cstrike/addons/sourcemod/plugins/disabled/gungame_sdkhooks.smx /home/steam/server/cstrike/addons/sourcemod/plugins/
 

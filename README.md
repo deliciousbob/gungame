@@ -17,6 +17,7 @@ docker-compose up
 * sm_gungame
 * quakesoundsv3
 * mapchooser_extended
+* sm_show_damage
 
 ## TODO
 
