@@ -138,7 +138,7 @@
          *  1 - Enabled for alive and dead players (alive players can not drop guns)
          *  2 - Enabled for dead players only (alive players can drop guns)
          */
-        "StripDeadPlayersWeapon" "0"
+        "StripDeadPlayersWeapon" "1"
 
         /* Show levels in scoreboard */
         "LevelsInScoreboard" "1"
@@ -165,21 +165,21 @@
         "VoteLevelLessWeaponCount" "2"
 
         /* Display a join message, popup giving players instructions on how to play */
-        "JoinMessage" "1"
+        "JoinMessage" "0"
 
         /**
          * Level down playr if they kill themself by WorldSpawn Suicide.
          * 0 - Disable
          * 1..N - Levels to loose
          */
-        "WorldspawnSuicide" "1"
+        "WorldspawnSuicide" "0"
 
         /**
          * Level down players if they use the "kill" command
          * 0 - Disable
          * 1..N - Levels to loose
          */
-        "CommitSuicide"     "1"
+        "CommitSuicide"     "0"
 
         /* How many levels they can gain in 1 round (0 - disabled) */
         "MaxLevelPerRound" "0"
@@ -467,7 +467,7 @@
         "ExtraNade" "0"
 
         /* Gives unlimited hegrenades to the player if he is on nage level */
-        "UnlimitedNades" "0"
+        "UnlimitedNades" "1"
 
         /**
          * Enable UnlimitedNades depending on the number of players in team.
@@ -505,7 +505,7 @@
         "MultiLevelBonusSpeed" "1.5"
 
         /* Miltilevel visual effect */
-        "MultiLevelEffect" "0"
+        "MultiLevelEffect" "1"
 
         /* How much levels is needed to get bonus */
         "MultiLevelAmount" "3"
@@ -524,7 +524,7 @@
         "WarmupEnabled" "1"
 
         /* Warmup time length */
-        "WarmupTimeLength" "60"
+        "WarmupTimeLength" "30"
 
         /**
          * Give random weapon on warmup.
@@ -589,7 +589,7 @@
         /* ===== [5. GUNGAME DISPLAY WINNER CONFIG] ===== */
 
         /* Display winner in MOTD window. */
-        "DisplayWinnerMotd" "0"
+        "DisplayWinnerMotd" "1"
 
         /* URL to display in MOTD window. */
         "DisplayWinnerUrl" "http://otstrel.ru/gg5_win.php"
