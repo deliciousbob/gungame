@@ -1,6 +1,6 @@
-# Waste Counter-Strike: Source Gungame Server
+# Waste Counter-Strike: Source GunGame Server
 
-Docker configs to start up a CS:S turbo gungame server
+Docker configs to start up a CS:S turbo GunGame server
 
 ## Usage
 
@@ -10,14 +10,14 @@ docker-compose up
 
 ## Mods
 
-* mmsource
-* sourcemod
-* sm_noblock
-* sm_ggdm
-* sm_gungame
-* quakesoundsv3
-* mapchooser_extended
-* sm_show_damage
+* [Metamod:Source v1.10.7](http://www.metamodsource.net/downloads.php/?branch=stable)
+* [SourceMod v1.9.0](https://www.sourcemod.net/downloads.php?branch=stable)
+* [NoBlock v1.4.2](https://forums.alliedmods.net/showthread.php?t=91617)
+* [DeathMatch:SM v1.8.0](https://forums.alliedmods.net/showthread.php?p=929190)
+* [GunGame v1.2.16.0](https://forums.alliedmods.net/showthread.php?t=93977)
+* [Quake Sounds v3.5.0](https://forums.alliedmods.net/showthread.php?t=224316)
+* [MapChooser Extended v1.10.2](https://forums.alliedmods.net/showthread.php?t=156974)
+* [Show Damage v1.0.7](https://forums.alliedmods.net/showthread.php?p=763425)
 
 ## TODO
 
