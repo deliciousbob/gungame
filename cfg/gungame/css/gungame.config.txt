@@ -77,7 +77,7 @@
          *      0 - Normal game end with scoreboard, vote next map valve menu and weapon drops.
          *      1 - Silent game end.
          */
-        "EndGameSilent" "0"
+        "EndGameSilent" "1"
 
         /**
          * Multiply sound effects volume.
