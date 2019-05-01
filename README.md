@@ -1,5 +1,8 @@
 # Waste Counter-Strike: Source GunGame Server
 
+![Docker Build Status](https://img.shields.io/docker/build/threesquared/docker-css-server-gungame-turbo.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/threesquared/docker-css-server-gungame-turbo.svg)
+
 Docker configs to start up a CS:S turbo GunGame server
 
 ## Usage
