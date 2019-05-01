@@ -1,17 +1,18 @@
-# Waste Counter-Strike: Source GunGame Server
+# Waste Counter-Strike: Source GunGame Turbo Server
 
 ![Docker Build Status](https://img.shields.io/docker/build/threesquared/docker-css-server-gungame-turbo.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/threesquared/docker-css-server-gungame-turbo.svg)
+![MicroBadger Size](https://img.shields.io/microbadger/image-size/image-size/threesquared/docker-css-server-gungame-turbo.svg)
 
-Docker configs to start up a CS:S turbo GunGame server
+Dockerfile and configs to run a CS:S server with GunGame and other various mods.
 
 ## Usage
 
 ```bash
-docker-compose up
+$ docker run -d -e RCON_PASSWORD=mypass -p 27015:27015 threesquared/docker-css-server-gungame-turbo
 ```
 
-## Mods
+## Included Mods
 
 * [Metamod:Source v1.10.7](http://www.metamodsource.net/downloads.php/?branch=stable)
 * [SourceMod v1.9.0](https://www.sourcemod.net/downloads.php?branch=stable)
