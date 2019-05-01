@@ -9,7 +9,7 @@ Dockerfile and configs to run a CS:S server with GunGame and other various mods.
 ## Usage
 
 ```bash
-$ docker run -d -e RCON_PASSWORD=mypass -p 27015:27015 threesquared/docker-css-server-gungame-turbo
+$ docker run -d -e RCON_PASSWORD=mypass -p 27015:27015 -p 27015:27015/udp threesquared/docker-css-server-gungame-turbo
 ```
 
 ## Included Mods
