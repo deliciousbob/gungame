@@ -25,4 +25,3 @@ docker-compose up
 * Speed boost on multiple kills
 * Get rid of rounds?
 * More hype sound effects
-* Fix bug that does not finish game
