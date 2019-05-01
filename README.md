@@ -4,6 +4,8 @@
 ![Docker Pulls](https://img.shields.io/docker/pulls/threesquared/docker-css-server-gungame-turbo.svg)
 ![MicroBadger Size](https://img.shields.io/microbadger/image-size/image-size/threesquared/docker-css-server-gungame-turbo.svg)
 
+[![GameTracker](https://cache.gametracker.com/server_info/5.135.164.88:27015/b_350_20_692108_381007_ffffff_000000.png)](https://www.gametracker.com/server_info/5.135.164.88:27015/)
+
 Dockerfile and configs to run a CS:S server with GunGame and other various mods.
 
 ## Usage
