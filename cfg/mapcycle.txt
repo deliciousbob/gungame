@@ -12,3 +12,8 @@ aim_bc_texture_7
 aim_bc_texture_jungle
 aim_bc_texture_agc
 aim_47th_nightoftheshotgun
+aim_spacewar
+gg_iceworld_fng
+gg_simpsons_street
+gg_lego_arena
+gg_pool_day_gx
