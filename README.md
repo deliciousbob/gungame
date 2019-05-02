@@ -1,4 +1,4 @@
-# Waste Counter-Strike: Source GunGame Turbo Server
+# [Waste] Counter-Strike: Source GunGame Turbo Server
 
 ![Docker Build Status](https://img.shields.io/docker/build/threesquared/docker-css-server-gungame-turbo.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/threesquared/docker-css-server-gungame-turbo.svg)
@@ -6,12 +6,15 @@
 
 [![GameTracker](https://cache.gametracker.com/server_info/5.135.164.88:27015/b_350_20_692108_381007_ffffff_000000.png)](https://www.gametracker.com/server_info/5.135.164.88:27015/)
 
-Dockerfile and configs to run a CS:S server with GunGame and other various mods.
+Dockerfile and configs to run a CS:S server with GunGame and various other mods.
 
 ## Usage
 
 ```bash
-$ docker run -d -e RCON_PASSWORD=mypass -p 27015:27015 -p 27015:27015/udp threesquared/docker-css-server-gungame-turbo
+$ docker run -d --name my-server \
+             -p 27015:27015 -p 27015:27015/udp \
+             -e RCON_PASSWORD=mypass \
+             threesquared/docker-css-server-gungame-turbo
 ```
 
 ## Included Mods
@@ -31,3 +34,4 @@ $ docker run -d -e RCON_PASSWORD=mypass -p 27015:27015 -p 27015:27015/udp threes
 * Speed boost on multiple kills
 * Get rid of rounds?
 * More hype sound effects
+* Set up FastDL

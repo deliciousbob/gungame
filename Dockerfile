@@ -2,7 +2,8 @@ FROM cm2network/steamcmd
 
 WORKDIR /home/steam
 
-ENV RCON_PASSWORD lolrly123
+ENV RCON_PASSWORD changeme
+ENV SERVER_HOSTNAME "[Waste] GunGame Server | Turbo | DM"
 
 USER root
 
