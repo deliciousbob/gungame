@@ -7,20 +7,24 @@ ENV SERVER_HOSTNAME "[Waste] GunGame Server | Turbo | DM"
 
 USER root
 
+# Install dependencies
 RUN apt-get update -y && \
 	apt-get install -y unzip
 
 USER steam
 
+# Install game
 RUN mkdir /home/steam/server && \
     /home/steam/steamcmd/steamcmd.sh +login anonymous \
 	+force_install_dir /home/steam/server \
 	+app_update 232330 validate \
 	+quit
 
+# Fix error
 RUN mkdir /home/steam/.steam/sdk32 && \
 	ln -s /home/steam/server/bin/steamclient.so /home/steam/.steam/sdk32/steamclient.so
 
+# Install plugins
 RUN wget -q https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux.tar.gz && \
 	tar -xzvf ./mmsource-1.10.7-git968-linux.tar.gz -C /home/steam/server/cstrike && \
 	rm ./mmsource-1.10.7-git968-linux.tar.gz && \
@@ -36,7 +40,8 @@ RUN wget -q https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux
 	wget -O /home/steam/sm_gungame.zip "https://forums.alliedmods.net/attachment.php?s=716ef65609b491b4a34670e767887027&attachmentid=133712&d=1400696532" && \
 	unzip -o /home/steam/sm_gungame.zip -d /home/steam/server/cstrike && \
 	rm /home/steam/sm_gungame.zip && \
-	wget -O /home/steam/server/cstrike/addons/sourcemod/plugins/quakesoundsv3.smx "http://www.sourcemod.net/vbcompiler.php?file_id=155260" && \
+	mv /home/steam/server/cstrike/addons/sourcemod/plugins/gungame.smx /home/steam/server/cstrike/addons/sourcemod/plugins/disabled/ && \
+	mv /home/steam/server/cstrike/addons/sourcemod/plugins/disabled/gungame_sdkhooks.smx /home/steam/server/cstrike/addons/sourcemod/plugins/ && \
 	wget -O /home/steam/quake_sounds.zip "https://forums.alliedmods.net/attachment.php?attachmentid=125461&d=1380903530" && \
 	unzip -o /home/steam/quake_sounds.zip -d Quake_Sounds_v3 && cp -r Quake_Sounds_v3/GameServer/* /home/steam/server/cstrike && rm -rf Quake_Sounds_v3 && \
 	rm /home/steam/quake_sounds.zip && \
@@ -46,12 +51,12 @@ RUN wget -q https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux
 	wget -O /home/steam/sm_show_damage.zip "https://forums.alliedmods.net/attachment.php?attachmentid=60615&d=1267305028" && \
 	unzip -o /home/steam/sm_show_damage.zip -d /home/steam/server/cstrike/addons/sourcemod && \
 	rm /home/steam/sm_show_damage.zip && \
-	mv /home/steam/server/cstrike/addons/sourcemod/plugins/gungame.smx /home/steam/server/cstrike/addons/sourcemod/plugins/disabled/ && \
-	mv /home/steam/server/cstrike/addons/sourcemod/plugins/disabled/gungame_sdkhooks.smx /home/steam/server/cstrike/addons/sourcemod/plugins/
+	wget -O /home/steam/server/cstrike/addons/sourcemod/plugins/HeadShotExplode.smx "http://www.sourcemod.net/vbcompiler.php?file_id=44798"
 
-ADD ./cfg/ /home/steam/server/cstrike/cfg
-ADD ./maps/ /home/steam/server/cstrike/maps
-ADD ./entrypoint.sh entrypoint.sh
+# Add config files
+COPY ./cfg/ /home/steam/server/cstrike/cfg
+COPY ./maps/ /home/steam/server/cstrike/maps
+COPY ./entrypoint.sh entrypoint.sh
 
 EXPOSE 27015
 EXPOSE 27015/udp

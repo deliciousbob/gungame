@@ -27,6 +27,7 @@ $ docker run -d --name my-server \
 * [Quake Sounds v3.5.0](https://forums.alliedmods.net/showthread.php?t=224316)
 * [MapChooser Extended v1.10.2](https://forums.alliedmods.net/showthread.php?t=156974)
 * [Show Damage v1.0.7](https://forums.alliedmods.net/showthread.php?p=763425)
+* [HeadShot Explode v1.0](https://forums.alliedmods.net/showthread.php?p=862489)
 
 ## TODO
 
@@ -35,3 +36,5 @@ $ docker run -d --name my-server \
 * Get rid of rounds?
 * More hype sound effects
 * Set up FastDL
+* HLstatsX?
+* Anti camp?
