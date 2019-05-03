@@ -3,7 +3,6 @@
 ![Docker Build Status](https://img.shields.io/docker/cloud/build/threesquared/docker-css-server-gungame-turbo.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/threesquared/docker-css-server-gungame-turbo.svg)
 [![](https://images.microbadger.com/badges/image/threesquared/docker-css-server-gungame-turbo.svg)](https://microbadger.com/images/threesquared/docker-css-server-gungame-turbo)
-
 [![GameTracker](https://cache.gametracker.com/server_info/5.135.164.88:27015/b_350_20_692108_381007_ffffff_000000.png)](https://www.gametracker.com/server_info/5.135.164.88:27015/)
 
 Dockerfile and configs to run a [Waste] CS:S server with GunGame and various other mods.
