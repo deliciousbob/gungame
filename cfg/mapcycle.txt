@@ -1,7 +1,6 @@
 gg_trs_aim_churches
 gg_text_ninetwentyv2
 gg_speedcastle
-gg_spacebar
 gg_simpsons_h1
 gg_ka_fallingtrash
 gg_dm_hangumhigh_fixed
