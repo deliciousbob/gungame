@@ -1,30 +1,5 @@
-FROM cm2network/steamcmd
+FROM threesquared/docker-css-server
 
-WORKDIR /home/steam
-
-ENV RCON_PASSWORD changeme
-ENV SERVER_HOSTNAME "[Waste] GunGame Server | Turbo | DM"
-
-USER root
-
-# Install dependencies
-RUN apt-get update -y && \
-	apt-get install -y unzip
-
-USER steam
-
-# Install game
-RUN mkdir /home/steam/server && \
-    /home/steam/steamcmd/steamcmd.sh +login anonymous \
-	+force_install_dir /home/steam/server \
-	+app_update 232330 validate \
-	+quit
-
-# Fix error
-RUN mkdir /home/steam/.steam/sdk32 && \
-	ln -s /home/steam/server/bin/steamclient.so /home/steam/.steam/sdk32/steamclient.so
-
-# Install plugins
 RUN wget -q https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux.tar.gz && \
 	tar -xzvf ./mmsource-1.10.7-git968-linux.tar.gz -C /home/steam/server/cstrike && \
 	rm ./mmsource-1.10.7-git968-linux.tar.gz && \
@@ -53,12 +28,9 @@ RUN wget -q https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux
 	rm /home/steam/sm_show_damage.zip && \
 	wget -O /home/steam/server/cstrike/addons/sourcemod/plugins/HeadShotExplode.smx "http://www.sourcemod.net/vbcompiler.php?file_id=44798"
 
-# Add config files
+ENV SERVER_HOSTNAME="[Waste] GunGame Server | Turbo | DM"
+
 COPY ./cfg/ /home/steam/server/cstrike/cfg
 COPY ./maps/ /home/steam/server/cstrike/maps
-COPY ./entrypoint.sh entrypoint.sh
 
-EXPOSE 27015
-EXPOSE 27015/udp
-
-CMD /home/steam/entrypoint.sh
+CMD ["+maxplayers", "16", "+map", "aim_spacewar"]
