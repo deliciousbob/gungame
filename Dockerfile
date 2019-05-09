@@ -30,5 +30,6 @@ RUN wget -q https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux
 
 COPY ./cfg/ /home/steam/server/cstrike/cfg
 COPY ./maps/ /home/steam/server/cstrike/maps
+COPY ./sound/ /home/steam/server/cstrike/sound
 
 CMD ["+maxplayers", "16", "+map", "aim_spacewar"]

@@ -30,7 +30,7 @@
          *      1 - Enabled.
          *      0 - Disabled.
          */
-        "FastSwitchOnLevelUp" "0"
+        "FastSwitchOnLevelUp" "1"
 
         /**
          * Switch weapon without delays when player changes weapon by himself.
@@ -112,7 +112,7 @@
          *     1 - Block weapon switch
          *     0 - Do not block weapon switch
          */
-        "BlockWeaponSwitchOnNade" "1"
+        "BlockWeaponSwitchOnNade" "0"
 
         /**
          * Show players level message in hint box instead of chat.
@@ -641,7 +641,7 @@
         "Autoff"            "gungame/smb_warning2.mp3"
         "MultiKill"         "gungame/multikill.mp3"   // (�) VALVE
         /* Put each song filename in this list seperated by commas */
-        "Winner"            "gungame/winner.mp3"      // (�) VALVE
+        "Winner"            "gungame/win_1.mp3"      // (�) VALVE
         "WarmupTimerSound"  "gungame/timer.mp3"       // (�) VALVE
     }
 }
