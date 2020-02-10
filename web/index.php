@@ -57,7 +57,7 @@ $data = $Query->GetInfo();
       <?php echo $data['Players']; ?> / <?php echo $data['MaxPlayers']; ?>
     </p>
     <p>
-      <a href="steam://connect/5.135.164.88:27015">Join</a>
+      <a href="steam://connect/5.135.164.88:27015">Join</a> | <a href="/stats">Stats</a>
     </p>
   </div>
 

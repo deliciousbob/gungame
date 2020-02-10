@@ -28,9 +28,12 @@ RUN wget -q https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux
   unzip -o /home/steam/sm_show_damage.zip -d /home/steam/server/cstrike/addons/sourcemod && \
   rm /home/steam/sm_show_damage.zip && \
   wget -O /home/steam/server/cstrike/addons/sourcemod/plugins/HeadShotExplode.smx "http://www.sourcemod.net/vbcompiler.php?file_id=44798" && \
-  wget -O /home/steam/HLXCE_in_game_plugins_sm.zip "https://bitbucket.org/Maverick_of_UC/hlstatsx-community-edition/downloads/hlxce_1_6_19.zip" && \
-  unzip -o /home/steam/HLXCE_in_game_plugins_sm.zip -d hlxce && cp -r hlxce/sourcemod/* /home/steam/server/cstrike/addons/sourcemod && rm -rf hlxce && \
-  rm /home/steam/HLXCE_in_game_plugins_sm.zip
+  wget -O /home/steam/hlxce_1_6_19.zip "https://bitbucket.org/Maverick_of_UC/hlstatsx-community-edition/downloads/hlxce_1_6_19.zip" && \
+  unzip -o /home/steam/hlxce_1_6_19.zip -d hlxce && \
+  cp -r hlxce/sourcemod/scripting/* /home/steam/server/cstrike/addons/sourcemod/scripting && \
+  mv hlxce/sourcemod/plugins/superlogs-css.smx /home/steam/server/cstrike/addons/sourcemod/plugins/ && \
+  mv hlxce/sourcemod/plugins/hlstatsx.smx /home/steam/server/cstrike/addons/sourcemod/plugins/ && \
+  rm -rf hlxce hlxce_1_6_19.zip
 
 COPY ./cstrike/cfg/ /home/steam/server/cstrike/cfg
 COPY ./cstrike/maps/ /home/steam/server/cstrike/maps
