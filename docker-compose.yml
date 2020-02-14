@@ -11,14 +11,13 @@ services:
       - "27015:27015/udp"
       - "27015:27015"
   hlstatsx:
-    image: startersclan/docker-hlstatsxce-daemon:latest
+    build:
+      context: ./hlstatsx
     environment:
       DB_HOST: database
       DB_NAME: hlstatsxce
       DB_USER: hlstatsxce
       DB_PASSWORD: password
-    ports:
-      - "27500:27500"
   database:
     image: mysql:5.7
     command: mysqld --sql_mode=""
