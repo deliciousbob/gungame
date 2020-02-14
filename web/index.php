@@ -9,6 +9,17 @@ $Query->Connect('127.0.0.1', '27015');
 
 $data = $Query->GetInfo();
 
+$servername = "localhost";
+$username = "gungame";
+$password = "";
+$dbname = "gungame";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+$sql = "SELECT * FROM gungame_playerdata";
+
+$result = $conn->query($sql);
+
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -43,6 +54,22 @@ $data = $Query->GetInfo();
     img {
       border: 1px solid #FFF;
     }
+
+    a {
+      color: white;
+    }
+
+    table {
+      border: 1px solid #FFF;
+      margin-left:auto;
+      margin-right:auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 5px;
+      text-align: left;
+    }
   </style>
 </head>
 
@@ -54,10 +81,22 @@ $data = $Query->GetInfo();
     </a>
     <p><?php echo $data['HostName']; ?></p>
     <p>
-      <?php echo $data['Players']; ?> / <?php echo $data['MaxPlayers']; ?>
+      <?php echo $data['Players']; ?> / <?php echo $data['MaxPlayers']; ?> Players
     </p>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Wins</th>
+      </tr>
+      <?php while($row = $result->fetch_assoc()) { ?>
+        <tr>
+          <td><?php echo $row["name"] ?></td>
+          <td><?php echo $row["wins"] ?></td>
+        </tr>
+      <?php } ?>
+    </table>
     <p>
-      <a href="steam://connect/5.135.164.88:27015">Join</a> | <a href="/stats">Stats</a>
+      <a href="steam://connect/5.135.164.88:27015">Join Server</a> | <a href="/stats">Full Stats</a>
     </p>
   </div>
 
