@@ -1,5 +1,10 @@
 FROM threesquared/docker-css-server
 
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends --no-install-suggests lib32z1 \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
 RUN wget -q https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux.tar.gz && \
   tar -xzvf ./mmsource-1.10.7-git968-linux.tar.gz -C /home/steam/server/cstrike && \
   rm ./mmsource-1.10.7-git968-linux.tar.gz && \
