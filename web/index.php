@@ -16,7 +16,7 @@ $dbname = "gungame";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-$sql = "SELECT * FROM gungame_playerdata";
+$sql = "SELECT * FROM gungame_playerdata ORDER BY wins DESC LIMIT 5";
 
 $result = $conn->query($sql);
 
@@ -61,12 +61,13 @@ $result = $conn->query($sql);
 
     table {
       border: 1px solid #FFF;
-      margin-left:auto;
-      margin-right:auto;
+      margin-left: auto;
+      margin-right: auto;
       border-collapse: collapse;
     }
 
-    th, td {
+    th,
+    td {
       padding: 5px;
       text-align: left;
     }
@@ -88,7 +89,7 @@ $result = $conn->query($sql);
         <th>Name</th>
         <th>Wins</th>
       </tr>
-      <?php while($row = $result->fetch_assoc()) { ?>
+      <?php while ($row = $result->fetch_assoc()) { ?>
         <tr>
           <td><?php echo $row["name"] ?></td>
           <td><?php echo $row["wins"] ?></td>

@@ -15,3 +15,8 @@ gg_iceworld_fng
 gg_simpsons_street
 gg_lego_arena
 gg_pool_day_gx
+gg_xlighty
+gg_wmd_cellular
+gg_aim_shotty_snow
+gg_natus_v2
+gg_neonarena_ii
