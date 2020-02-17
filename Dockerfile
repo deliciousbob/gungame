@@ -44,8 +44,6 @@ RUN wget -q https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux
   mv hlxce/sourcemod/plugins/hlstatsx.smx /home/steam/server/cstrike/addons/sourcemod/plugins/ && \
   rm -rf hlxce hlxce_1_6_19.zip
 
-COPY ./cstrike/cfg/ /home/steam/server/cstrike/cfg
-COPY ./cstrike/maps/ /home/steam/server/cstrike/maps
-COPY ./cstrike/sound/ /home/steam/server/cstrike/sound
+COPY ./cstrike/ /home/steam/server/cstrike/
 
 CMD ["+maxplayers", "16", "+map", "aim_spacewar"]
